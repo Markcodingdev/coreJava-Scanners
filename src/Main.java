@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /* Tools (import java.util.Scanner;) must be imported into file to allow for usage of additional data types.
-   Scanner allows for user input. note that tools are above all other code in file.
-   following the initialization of the tool, a Scanner object must be created.
+   Scanner allows for user input. note that tools & imported packages are above all other code in file.
+   following the import of the package, a Scanner object must be created.
    first declare the variable with type, then initialize the new Scanner object:
                 Scanner scannerName = new Scanner(System.in);
    This statement prompts the user for input.
@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner userInput = new Scanner(System.in);
-        // tool & data-type scanner is declared with var name userInput.
+        // class & data-type, scanner is declared with var name userInput.
         // a new scanner is initialized with the purpose of receiving input from user.
 
         String scanned = userInput.next();

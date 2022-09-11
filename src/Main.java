@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.lang.Boolean;
+import java.lang.Integer;
 /* Tools (import java.util.Scanner;) must be imported into file to allow for usage of additional data types.
    Scanner allows for user input. note that tools & imported packages are above all other code in file.
    following the import of the package, a Scanner object must be created.
@@ -37,21 +39,21 @@ public class Main {
 
          */
 
-        // to get an integer value from user's string:
+        // to get an integer/boolean value from user's string:
 
-        int scannerInt = Integer.parseInt(scanned);
+      //  int scannerInt = Integer.parseInt(scanned);
         boolean scannerBoolean = Boolean.parseBoolean(scanned); //pars & filter
         System.out.println(scanned);
-        System.out.println(scannerInt);
+       // System.out.println(scannerInt);
         System.out.println(scannerBoolean);
-        // without proper conditional statement, error is still the result.
+        // without proper conditional statement, the above output results in error if any other data type is included in user input.
         // but this is proper syntax for function.
 
 
 
 
 
-        // First portion is scanner, second is focused on operators.
+        // First portion is scanner, second is focused on intro to operators.
 
         int x, y, z = 56;
         //variables can be declared & initialized in-line,or declared then initialized
@@ -64,7 +66,7 @@ public class Main {
         double preciseDivision = ((double)x / y);
         // x has been type-cast to double in-line, but original assignment it still int.
         System.out.println(x); // output = int value because declared as int.
-        // x only takes primitive type double in local statement.
+        // x only takes primitive type double in single statement.
 
         // even if both numbers are double with %, outputs are whole number remainder. 12.0/5.0 == 2.0
 
@@ -76,19 +78,19 @@ public class Main {
          */
         System.out.println(sumD); // 5
         System.out.println(modulus); // r1
-        System.out.println((double)sumD);
-        //when searching for precise remainder with decimal value, at least one of
-        // the operands must be var: double. attempting to output the solution with a cast-type
-        // of double will only give integer value still.
-        System.out.println(preciseDivision);
+        System.out.println((double)sumD); // 5.0
+        // when searching for precise remainder with decimal value, at least one of
+        // the operands must be double. attempting to output the solution with a cast-type
+        // of double, while only casting in  will only give integer value still.
+        System.out.println(preciseDivision); // 5.5
         // only 1 operand needs to be type double for precision decimal value.
 
         //exponent arithmetic in java is a bit different syntactically.
         // instead of ** .. command = Math.pow(x,y) x == base , y == exponent
         // exponents default to var type double unless otherwise cast in-line.
         int sumSquaredInt = (int) Math.pow(sumD,2); // == 25
-        double sumSquared = Math.pow(sumD, 2); // == 25.0
-
+        var sumSquared = Math.pow(sumD, 2); // == 25.0
+        //using var appears to allow for auto-casting from sdk..
         System.out.println(sumSquared);
         System.out.println(sumSquaredInt);
 // if any var is double, resulting arithmetic will be double; thus, must be cast as such.

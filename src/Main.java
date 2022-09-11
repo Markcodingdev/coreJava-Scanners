@@ -92,7 +92,7 @@ public class Main {
         System.out.println(sumSquared);
         System.out.println(sumSquaredInt);
 // if any var is double, resulting arithmetic will be double; thus, must be cast as such.
-
+//
 
     }
 }

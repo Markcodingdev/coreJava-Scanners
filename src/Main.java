@@ -7,7 +7,11 @@ public class Main {
         System.out.println(x + y);
 
         x++;
+        y++;
+
+
         System.out.println(x);
+        System.out.println(y);
     }
 
 
